@@ -14,7 +14,7 @@
             <h1>TITLE</h1>
         </div>
         <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
+        JORGE AUGUSTO --- Laravel has wonderful, thorough documentation covering every aspect of the framework.
         </div>
     </div>
     <div class="card">
