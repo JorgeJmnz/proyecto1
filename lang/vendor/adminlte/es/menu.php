@@ -8,6 +8,7 @@ return [
     'account_settings'              => 'AJUSTES DE LA CUENTA',
     'profile'                       => 'Perfil',
     'change_password'               => 'Cambiar Contraseña',
+    'add_elements'                  => 'Agregar elementos',
     'multilevel'                    => 'Multi Nivel',
     'level_one'                     => 'Nivel 1',
     'level_two'                     => 'Nivel 2',
