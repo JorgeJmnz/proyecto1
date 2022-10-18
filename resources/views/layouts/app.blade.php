@@ -30,7 +30,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('modulos.index') }}">{{ __('Modulos') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('subestaciones.index') }}">{{ __('Subestaciones') }}</a>
+                                </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

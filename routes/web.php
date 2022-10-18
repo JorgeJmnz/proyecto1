@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::resource('modulos', App\Http\Controllers\ModuloController::class);
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
+Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
