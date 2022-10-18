@@ -8,55 +8,7 @@
 
 @section('content')
 
-<p>Welcome to this beautiful admin panel.</p>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        JORGE AUGUSTO --- Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h1>TITLE</h1>
-        </div>
-        <div class="card-body">
-        Laravel has wonderful, thorough documentation covering every aspect of the framework.
-        </div>
-    </div>
+<img  width="100%" height="1080" loading="lazy" src="vendor/adminlte/dist/img/xcaret.png">
 
 @stop
 
