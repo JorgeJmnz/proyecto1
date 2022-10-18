@@ -3,7 +3,7 @@
 @section('title', 'AdminHome')
 
 @section('content_header')
-    <h1>UbietySystem</h1>
+    <h1>XEÑAL</h1>
 @stop
 
 @section('content')
