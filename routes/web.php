@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
 
 Route::resource('modulos', App\Http\Controllers\ModuloController::class);
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
