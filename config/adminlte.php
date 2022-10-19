@@ -353,13 +353,18 @@ return [
                     ['header' => 'CRUDS'],
                     [
                         'text' => 'Agregar módulos',
-                        'url'  => 'welcome',
+                        'route'  => 'modulos.index',
                         'icon' => 'fas fa-duotone fa-cubes',
                     ],
                     [
                         'text' => 'Agregar subestación',
-                        'url'  => '',
+                        'route'  => 'subestaciones.index',
                         'icon' => 'fas fa-duotone fa-bolt',
+                    ],
+                    [
+                        'text' => 'Agregar categoria',
+                        'route'  => 'categorias.index',
+                        'icon' => 'fas fa-duotone fa-list', 
                     ],
                     [
                         'text' => 'Agregar usuarios',
