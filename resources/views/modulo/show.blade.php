@@ -21,31 +21,31 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Categoria Id:</strong>
-                            {{ $modulo->categoria_id }}
+                            <strong>Categoría:</strong>
+                            {{ $modulo->categoria->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Nombre:</strong>
                             {{ $modulo->nombre }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripcion:</strong>
+                            <strong>Descripción:</strong>
                             {{ $modulo->descripcion }}
                         </div>
                         <div class="form-group">
-                            <strong>Subestacion Id:</strong>
-                            {{ $modulo->subestacion_id }}
+                            <strong>Subestación:</strong>
+                            {{ $modulo->subestacione->nombre}}
                         </div>
                         <div class="form-group">
-                            <strong>Lat:</strong>
+                            <strong>Latitud:</strong>
                             {{ $modulo->lat }}
                         </div>
                         <div class="form-group">
-                            <strong>Long:</strong>
+                            <strong>Longitud:</strong>
                             {{ $modulo->long }}
                         </div>
                         <div class="form-group">
-                            <strong>Fechaman:</strong>
+                            <strong>Fecha de mantenimiento:</strong>
                             {{ $modulo->fechaman }}
                         </div>
                         <div class="form-group">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            {{ $modulo->imagen }}
+                            {{ $modulo->imagen}}
                         </div>
 
                     </div>
