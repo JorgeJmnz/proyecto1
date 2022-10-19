@@ -26,6 +26,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>     
+            <!-- Script para ver la imagen antes de CREAR UN NUEVO PRODUCTO -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+<script>   
+    $(document).ready(function (e) {   
+        $('#imagen').change(function(){            
+            let reader = new FileReader();
+            reader.onload = (e) => { 
+                $('#imagenSeleccionada').attr('src', e.target.result); 
+            }
+            reader.readAsDataURL(this.files[0]); 
+        });
+    });
+</script>   
     </section>
 @endsection

@@ -37,7 +37,7 @@ class Modulo extends Model
 		'long' => 'required',
 		'fechaman' => 'required',
 		'mantenimiento' => 'required',
-		'imagen' => 'required',
+		'imagen' =>'required|image|mimes:png,jpeg,jpg,svg|max:1024'
     ];
 
     protected $perPage = 20;

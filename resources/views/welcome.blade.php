@@ -37,7 +37,7 @@
                         role="button">Register</a>
                     </form>
                 </div>
-                <img  width="20%" height="220" src="vendor/adminlte/dist/img/xcaret.png">
+                <img  width="10%" height="100" src="vendor/adminlte/dist/img/xcaret.png">
         </div>
         
     </body>

@@ -574,6 +574,161 @@ return [
                 ],
                     ],
         ],
+        [
+            'text' => 'XIBALBÁ',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        ['header' => 'HOTELES GRUPO XCARET',
+        'icon'    => 'fas fa-duotone fa-folder'
+        ],
+        [
+            'text' => 'XCARET MÉXICO',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'XCARET ARTE',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'LA CASA DE LA PLAYA',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
         ['header' => 'Información'],
         [
             'text'       => 'Acerca de',
@@ -651,7 +806,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -676,7 +831,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

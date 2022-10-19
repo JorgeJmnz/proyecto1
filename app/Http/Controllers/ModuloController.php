@@ -56,6 +56,13 @@ class ModuloController extends Controller
 
         $modulo = Modulo::create($request->all());
 
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'imagen/';
+            $imagenProducto = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $modulo['imagen'] = "$imagenProducto";             
+        }
+
         return redirect()->route('modulos.index')
             ->with('success', 'Modulo created successfully.');
     }
@@ -101,6 +108,14 @@ class ModuloController extends Controller
 
         $modulo->update($request->all());
 
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'imagen/';
+            $imagenProducto = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $modulo['imagen'] = "$imagenProducto";             
+        }else{
+            unset($modulo['imagen']);
+        }
         return redirect()->route('modulos.index')
             ->with('success', 'Modulo updated successfully');
     }

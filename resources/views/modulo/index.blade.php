@@ -34,12 +34,12 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>No.</th>
                                         
-										<th>Categoria</th>
+										<th>Categoría</th>
 										<th>Nombre</th>
-										<th>Descripcion</th>
-										<th>Subestacion</th>
+										<th>Descripción</th>
+										<th>Subestación</th>
 										<th>Latitud</th>
 										<th>Longitud</th>
 										<th>Fecha de mantenimiento</th>
@@ -62,8 +62,9 @@
 											<td>{{ $modulo->long }}</td>
 											<td>{{ $modulo->fechaman }}</td>
 											<td>{{ $modulo->mantenimiento }}</td>
-											<td>{{ $modulo->imagen }}</td>
-
+                                            <td  class="border px-5 py-2">
+                                            <img src="/imagen/{{$modulo->imagen}}" width="100%">
+                                            </td>      
                                             <td>
                                                 <form action="{{ route('modulos.destroy',$modulo->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('modulos.show',$modulo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
