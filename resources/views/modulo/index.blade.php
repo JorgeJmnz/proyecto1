@@ -62,8 +62,8 @@
 											<td>{{ $modulo->long }}</td>
 											<td>{{ $modulo->fechaman }}</td>
 											<td>{{ $modulo->mantenimiento }}</td>
-                                            <td  class="border px-5 py-2">
-                                            <img src="/imagen/{{$modulo->imagen}}" width="100%">
+                                            <td>
+                                            <img src="/imagen/{{$modulo->imagen}}" width="60%">
                                             </td>      
                                             <td>
                                                 <form action="{{ route('modulos.destroy',$modulo->id) }}" method="POST">

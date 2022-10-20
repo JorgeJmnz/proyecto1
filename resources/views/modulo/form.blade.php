@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Fecha de mantenimiento') }}
-            {{ Form::text('fechaman', $modulo->fechaman, ['class' => 'form-control' . ($errors->has('fechaman') ? ' is-invalid' : ''), 'placeholder' => 'Fecha de mantenimiento']) }}
+            {{ Form::text('fechaman', $modulo->fechaman, ['class' => 'form-control' . ($errors->has('fechaman') ? ' is-invalid' : ''), 'placeholder' => 'AAMMDD Ejemplo: 221227']) }}
             {!! $errors->first('fechaman', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

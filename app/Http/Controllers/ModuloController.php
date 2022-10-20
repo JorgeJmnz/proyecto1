@@ -53,16 +53,14 @@ class ModuloController extends Controller
     public function store(Request $request)
     {
         request()->validate(Modulo::$rules);
-
-        $modulo = Modulo::create($request->all());
-
+        $modulo=$request->all();
         if($imagen = $request->file('imagen')) {
             $rutaGuardarImg = 'imagen/';
-            $imagenProducto = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
-            $imagen->move($rutaGuardarImg, $imagenProducto);
-            $modulo['imagen'] = "$imagenProducto";             
+            $imagenmodulo = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenmodulo);
+            $modulo['imagen'] = "$imagenmodulo";             
         }
-
+        Modulo::create($modulo);
         return redirect()->route('modulos.index')
             ->with('success', 'Modulo created successfully.');
     }
@@ -106,16 +104,18 @@ class ModuloController extends Controller
     {
         request()->validate(Modulo::$rules);
 
-        $modulo->update($request->all());
-
+        
+        $modu=$request->all();
         if($imagen = $request->file('imagen')) {
             $rutaGuardarImg = 'imagen/';
-            $imagenProducto = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
-            $imagen->move($rutaGuardarImg, $imagenProducto);
-            $modulo['imagen'] = "$imagenProducto";             
+            $imagenmodulo = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenmodulo);
+            $modu['imagen'] = "$imagenmodulo";             
         }else{
-            unset($modulo['imagen']);
+            unset($modu['imagen']);
         }
+
+        $modulo->update($modu);
         return redirect()->route('modulos.index')
             ->with('success', 'Modulo updated successfully');
     }
