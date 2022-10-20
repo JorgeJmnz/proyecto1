@@ -8,7 +8,7 @@ use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 /**
- * Class ModuloController
+ * Class ModuloControllera
  * @package App\Http\Controllers
  */
 class ModuloController extends Controller
