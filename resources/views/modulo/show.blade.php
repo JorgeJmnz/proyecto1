@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.sb')
 
 @section('template_title')
     {{ $modulo->name ?? 'Show Modulo' }}
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            <img src="/imagen/{{ $modulo->imagen}}" width="60%">
+                            <img src="/imagen/{{ $modulo->imagen}}" width="10%">
                             
                         </div>
 

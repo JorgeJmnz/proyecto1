@@ -49,14 +49,6 @@
                                     <a class="nav-link" href="{{ route('catalogo.index') }}">{{ __('Catalogo') }}</a>
                                 </li>
                     </ul>
-                    <div>
-                        <form class="d-flex" role="search">
-                            <input name="buscarpor" class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search" value="{{$buscarpor}}">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-
-
 
 
                     <!-- Right Side Of Navbar -->

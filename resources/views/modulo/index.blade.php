@@ -63,7 +63,7 @@
 											<td>{{ $modulo->fechaman }}</td>
 											<td>{{ $modulo->mantenimiento }}</td>
                                             <td>
-                                            <img src="/imagen/{{$modulo->imagen}}" width="60%">
+                                            <img src="/imagen/{{$modulo->imagen}}" width="30%">
                                             </td>      
                                             <td>
                                                 <form action="{{ route('modulos.destroy',$modulo->id) }}" method="POST">

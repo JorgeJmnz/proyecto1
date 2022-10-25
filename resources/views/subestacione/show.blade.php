@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.sb')
 
 @section('template_title')
     {{ $subestacione->name ?? 'Show Subestaciones' }}

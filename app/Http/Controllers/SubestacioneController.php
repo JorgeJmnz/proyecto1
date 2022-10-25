@@ -21,11 +21,14 @@ class SubestacioneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $subestaciones = Subestacione::paginate();
 
-        return view('subestacione.index', compact('subestaciones'))
+        $buscarpor=$request->get('buscarpor');
+
+        $subestaciones = Subestacione::where('nombre', 'LIKE', '%' .$buscarpor. '%')->paginate();
+
+        return view('subestacione.index', compact('subestaciones', 'buscarpor'))
             ->with('i', (request()->input('page', 1) - 1) * $subestaciones->perPage());
     }
 

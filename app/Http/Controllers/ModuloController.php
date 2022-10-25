@@ -23,11 +23,13 @@ class ModuloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $modulos = Modulo::paginate();
+        $buscarpor=$request->get('buscarpor');
 
-        return view('modulo.index', compact('modulos'))
+        $modulos = Modulo::where('nombre', 'LIKE', '%' .$buscarpor. '%')->paginate();
+
+        return view('modulo.index', compact('modulos', 'buscarpor'))
             ->with('i', (request()->input('page', 1) - 1) * $modulos->perPage());
     }
 
@@ -38,6 +40,8 @@ class ModuloController extends Controller
      */
     public function create()
     {
+
+        
         $modulo = new Modulo();
         $categorias= Categoria::pluck ('nombre', 'id');
         $subestaciones= Subestacione::pluck('nombre', 'id');

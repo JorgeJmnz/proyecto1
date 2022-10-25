@@ -21,11 +21,14 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categorias = Categoria::paginate();
 
-        return view('categoria.index', compact('categorias'))
+        $buscarpor=$request->get('buscarpor');
+
+        $categorias = Categoria::where('nombre', 'LIKE', '%' .$buscarpor. '%')->paginate();
+
+        return view('categoria.index', compact('categorias', 'buscarpor'))
             ->with('i', (request()->input('page', 1) - 1) * $categorias->perPage());
     }
 
