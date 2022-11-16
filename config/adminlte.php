@@ -111,9 +111,9 @@ return [
         'img' => [
             'path' => 'vendor/adminlte/dist/img/xcaret.png',
             'alt' => 'Xcaret Preloader Image',
-            'effect' => 'animation_wobble',
-            'width' => 110,
-            'height' => 125,
+            'effect' => 'animation_wobble', //or animation__shake'
+            'width' => 210,
+            'height' => 225,
         ],
     ],
 
@@ -368,7 +368,7 @@ return [
                     ],
                     [
                         'text' => 'Agregar usuarios',
-                        'url'  => '',
+                        'route'  => 'users.index',
                         'icon' => 'fas fa-fw fa-user',
                     ],
                     ['header' => 'CONFIGURACIÓN'],

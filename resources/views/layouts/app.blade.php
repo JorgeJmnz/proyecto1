@@ -45,6 +45,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('subestaciones.index') }}">{{ __('Subestaciones') }}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuarios') }}</a>
+                                </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
