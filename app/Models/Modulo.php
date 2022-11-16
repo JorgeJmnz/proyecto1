@@ -35,6 +35,7 @@ class Modulo extends Model
 		'subestacion_id' => 'required',
 		'lat' => 'required',
 		'long' => 'required',
+		'cuadrante' => 'required',
 		'fechaman' => 'required',
 		'mantenimiento' => 'required',
 		'imagen' =>'required|image|mimes:png,jpeg,jpg,svg|max:1024'
@@ -47,7 +48,7 @@ class Modulo extends Model
      *
      * @var array
      */
-    protected $fillable = ['categoria_id','nombre','descripcion','subestacion_id','lat','long','fechaman','mantenimiento','imagen'];
+    protected $fillable = ['categoria_id','nombre','descripcion','subestacion_id','lat','long','cuadrante','fechaman','mantenimiento','imagen'];
 
 
     /**

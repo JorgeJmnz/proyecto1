@@ -42,6 +42,7 @@
 										<th>Subestación</th>
 										<th>Latitud</th>
 										<th>Longitud</th>
+										<th>Cuadrante</th>
 										<th>Fecha de mantenimiento</th>
 										<th>Mantenimiento realizado</th>
 										<th>Imagen</th>
@@ -60,6 +61,7 @@
 											<td>{{ $modulo->subestacione->nombre }}</td>
 											<td>{{ $modulo->lat }}</td>
 											<td>{{ $modulo->long }}</td>
+											<td>{{ $modulo->cuadrante }}</td>
 											<td>{{ $modulo->fechaman }}</td>
 											<td>{{ $modulo->mantenimiento }}</td>
                                             <td>

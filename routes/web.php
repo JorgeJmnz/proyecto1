@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('mapa');
 });
 
 

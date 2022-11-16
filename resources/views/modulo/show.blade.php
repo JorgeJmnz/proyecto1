@@ -45,6 +45,10 @@
                             {{ $modulo->long }}
                         </div>
                         <div class="form-group">
+                            <strong>Cuadrante:</strong>
+                            {{ $modulo->cuadrante }}
+                        </div>
+                        <div class="form-group">
                             <strong>Fecha de mantenimiento:</strong>
                             {{ $modulo->fechaman }}
                         </div>

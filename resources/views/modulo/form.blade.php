@@ -37,6 +37,11 @@
             {!! $errors->first('long', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('Cuadrante') }}
+            {{ Form::text('cuadrante', $modulo->cuadrante, ['class' => 'form-control' . ($errors->has('cuadrante') ? ' is-invalid' : ''), 'placeholder' => 'Cuadrante']) }}
+            {!! $errors->first('cuadrante', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('Fecha de mantenimiento') }}
             {{ Form::text('fechaman', $modulo->fechaman, ['class' => 'form-control' . ($errors->has('fechaman') ? ' is-invalid' : ''), 'placeholder' => 'AAMMDD Ejemplo: 221227']) }}
             {!! $errors->first('fechaman', '<div class="invalid-feedback">:message</div>') !!}
