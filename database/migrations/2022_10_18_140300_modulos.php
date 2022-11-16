@@ -25,7 +25,7 @@ return new class extends Migration
             $table->bigInteger('subestacion_id')->unsigned();
             $table->double('lat', 20);
             $table->double('long', 20);
-            $table->dateTime('fechaman');
+            $table->date('fechaman');
             $table->longText('mantenimiento');
             $table->string('imagen');
             $table->timestamps();
