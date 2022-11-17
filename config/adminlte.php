@@ -16,7 +16,7 @@ return [
 
     'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '| UbietySystem',
+    'title_postfix' => '| Xeñal',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>XE</b>ÑAL',
     'logo_img' => 'vendor/adminlte/dist/img/xcaret.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'brand-image img-circle elevation-5',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'UbietySystem',
+    'logo_img_alt' => 'Xeñal',
 
     /*
     |--------------------------------------------------------------------------
@@ -111,9 +111,9 @@ return [
         'img' => [
             'path' => 'vendor/adminlte/dist/img/xcaret.png',
             'alt' => 'Xcaret Preloader Image',
-            'effect' => 'animation_wobble',
-            'width' => 110,
-            'height' => 125,
+            'effect' => 'animation_wobble', //or animation__shake'
+            'width' => 210,
+            'height' => 225,
         ],
     ],
 
@@ -134,7 +134,7 @@ return [
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => true,
     'usermenu_desc' => true,
-    'usermenu_profile_url' => true,
+    'usermenu_profile_url' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -168,7 +168,7 @@ return [
     */
 
     'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => 'Xel-Há',
+    'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
@@ -192,7 +192,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-info elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -210,8 +210,8 @@ return [
     |
     */
 
-    'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
+    'sidebar_mini' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -233,7 +233,7 @@ return [
     */
 
     'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
+    'right_sidebar_icon' => 'fas fa-home',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
@@ -253,7 +253,8 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
+    'welcome' => 'welcome',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -306,22 +307,26 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        /* TXT comentado
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Dashboard',
+            'url' => 'dashboard',
+            'icon' => 'fas fa-fw fa-home'
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CONFIGURACIÓN'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'profile',                                                     
+            'url'  => 'admin/settings',                                                 
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'CRUD',
+            'url'  => '',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -330,59 +335,419 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text' => 'add_elements',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],*/
+        ['header' => 'PARQUES GRUPO XCARET',
+        'icon'    => 'fas fa-duotone fa-folder'
+        ],
+        [
+            'text' => 'XEL-HÁ',
+            'submenu' => [
+                    [
+                        'text' => 'Dashboard',
+                        'url' => 'dashboard',
+                        'icon' => 'fas fa-fw fa-home'
+                    ],
+                    ['header' => 'CRUDS'],
+                    [
+                        'text' => 'Agregar módulos',
+                        'route'  => 'modulos.index',
+                        'icon' => 'fas fa-duotone fa-cubes',
+                    ],
+                    [
+                        'text' => 'Agregar subestación',
+                        'route'  => 'subestaciones.index',
+                        'icon' => 'fas fa-duotone fa-bolt',
+                    ],
+                    [
+                        'text' => 'Agregar categoria',
+                        'route'  => 'categorias.index',
+                        'icon' => 'fas fa-duotone fa-list', 
+                    ],
+                    [
+                        'text' => 'Agregar usuarios',
+                        'route'  => 'users.index',
+                        'icon' => 'fas fa-fw fa-user',
+                    ],
+                    ['header' => 'CONFIGURACIÓN'],
+                    [
+                        'text' => 'profile',                                                     
+                        'url'  => 'admin/settings',                                                 
+                        'icon' => 'fas fa-fw fa-user',
+                    ],
+                    [
+                        'text' => 'change_password',
+                        'url'  => 'admin/settings',
+                        'icon' => 'fas fa-fw fa-lock',
+                    ],
+                        ],
+        ],
+        [
+            'text' => 'XCARET',
+            'url'  => '#',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
                     'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
                     ],
+        ],
+        [
+            'text' => 'XPLOR',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Agregar subestación',
                     'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
                 ],
-            ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
+            'text' => 'XENSES',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'XAVAGE',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'XOCHIMILCO',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'XIBALBÁ',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        ['header' => 'HOTELES GRUPO XCARET',
+        'icon'    => 'fas fa-duotone fa-folder'
+        ],
+        [
+            'text' => 'XCARET MÉXICO',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'XCARET ARTE',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        [
+            'text' => 'LA CASA DE LA PLAYA',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-home'
+                ],
+                ['header' => 'CRUDS'],
+                [
+                    'text' => 'Agregar módulos',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-cubes',
+                ],
+                [
+                    'text' => 'Agregar subestación',
+                    'url'  => '#',
+                    'icon' => 'fas fa-duotone fa-bolt',
+                ],
+                [
+                    'text' => 'Agregar usuarios',
+                    'url'  => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                ['header' => 'CONFIGURACIÓN'],
+                [
+                    'text' => 'profile',                                                     
+                    'url'  => 'admin/settings',                                                 
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                    ],
+        ],
+        ['header' => 'Información'],
+        [
+            'text'       => 'Acerca de',
+            'icon_color' => 'cyan',
+            'url'        => '#',
+        ]
+        /*
+        [
+            'text'       => 'Compartido',
             'icon_color' => 'red',
             'url'        => '#',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'Tareas',
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        */
+        
     ],
 
     /*
@@ -441,7 +806,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -466,7 +831,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
