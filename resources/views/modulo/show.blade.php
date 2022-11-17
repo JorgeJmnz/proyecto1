@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            <img src="/imagen/{{ $modulo->imagen}}" width="10%">
+                            <img src="/imagen/{{ $modulo->imagen}}" width="30%">
                             
                         </div>
 
