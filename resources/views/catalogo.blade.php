@@ -17,6 +17,7 @@
         <h5 class="card-title">{{ $modulo->nombre }}</h5>
         <p>{{$modulo->categoria->nombre}}</p>
         <p class="card-text">{{ $modulo->descripcion }}</p>
+        <a href=""><button type="button" class="btn btn-primary">Show</button></a>
       </div>
     </div>
   </div>
