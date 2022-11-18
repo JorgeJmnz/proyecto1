@@ -22,11 +22,16 @@ Route::get('/dashboard', function () {
     return view('mapa');
 });
 
+Route::get('/mostraritem', function () {
+    return view('item');
+});
+
 
 Route::resource('modulos', App\Http\Controllers\ModuloController::class);
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
 Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class);
 Route::resource('catalogo', App\Http\Controllers\catalgocontroller::class);
+Route::resource('mostraritem', App\Http\Controllers\mostraritemcontroller::class);
 
 Auth::routes();
 
