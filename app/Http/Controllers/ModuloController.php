@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Modulo;
 use App\Models\Subestacione;
 use App\Models\Categoria;
+use App\Models\Encargado;
 use Illuminate\Http\Request;
 
 /**
@@ -45,7 +46,8 @@ class ModuloController extends Controller
         $modulo = new Modulo();
         $categorias= Categoria::pluck ('nombre', 'id');
         $subestaciones= Subestacione::pluck('nombre', 'id');
-        return view('modulo.create', compact('modulo', 'categorias', 'subestaciones'));
+        $encargados= Encargado::pluck('nombre', 'id', 'notas');
+        return view('modulo.create', compact('modulo', 'categorias', 'subestaciones', 'encargados'));
     }
 
     /**
@@ -93,8 +95,8 @@ class ModuloController extends Controller
         $modulo = Modulo::find($id);
         $categorias= Categoria::pluck ('nombre', 'id');
         $subestaciones= Subestacione::pluck('nombre', 'id');
-
-        return view('modulo.edit', compact('modulo', 'categorias', 'subestaciones'));
+        $encargados= Encargado::pluck('nombre', 'id', 'notas');
+        return view('modulo.create', compact('modulo', 'categorias', 'subestaciones', 'encargados'));
     }
 
     /**
