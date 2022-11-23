@@ -26,8 +26,9 @@ Route::get('/dashboard', function () {
 Route::resource('modulos', App\Http\Controllers\ModuloController::class);
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
 Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class);
-Route::resource('catalogo', App\Http\Controllers\catalgocontroller::class);
 
+Route::resource('catalogo', App\Http\Controllers\catalgocontroller::class);
+Route::resource('mostraritem', App\Http\Controllers\mostraritem::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
