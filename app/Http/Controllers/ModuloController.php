@@ -18,6 +18,10 @@ class ModuloController extends Controller
     public function __construct()
 {
     $this->middleware('auth');
+    $this->middleware('can:modulos.index')->only('index');
+    $this->middleware('can:modulos.edit')->only('edit','update');
+    $this->middleware('can:modulos.create')->only('create','store');
+    $this->middleware('can:modulos.destroy')->only('destroy');
 }
     /**
      * Display a listing of the resource.
