@@ -15,6 +15,10 @@ class SubestacioneController extends Controller
     public function __construct()
 {
     $this->middleware('auth');
+    $this->middleware('can:subestaciones.index')->only('index');
+    $this->middleware('can:subestaciones.edit')->only('edit','update');
+    $this->middleware('can:subestaciones.create')->only('create','store');
+    $this->middleware('can:subestaciones.destroy')->only('destroy');
 }
     /**
      * Display a listing of the resource.
