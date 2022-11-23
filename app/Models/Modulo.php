@@ -32,6 +32,7 @@ class Modulo extends Model
 		'categoria_id' => 'required',
 		'nombre' => 'required',
 		'descripcion' => 'required',
+        'encargados_id'=> 'required',
 		'subestacion_id' => 'required',
 		'lat' => 'required',
 		'long' => 'required',
@@ -48,7 +49,7 @@ class Modulo extends Model
      *
      * @var array
      */
-    protected $fillable = ['categoria_id','nombre','descripcion','subestacion_id','lat','long','cuadrante','fechaman','mantenimiento','imagen'];
+    protected $fillable = ['categoria_id','nombre','descripcion','encargados_id','subestacion_id','lat','long','cuadrante','fechaman','mantenimiento','imagen'];
 
 
     /**
@@ -66,6 +67,12 @@ class Modulo extends Model
     {
         return $this->hasOne('App\Models\Subestacione', 'id', 'subestacion_id');
     }
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function encargado()
+    {
+        return $this->hasOne('App\Models\Encargado', 'id', 'encargados_id');
+    }
 
 }

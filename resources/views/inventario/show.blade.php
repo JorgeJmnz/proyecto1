@@ -22,7 +22,7 @@
                         
                         <div class="form-group">
                             <strong>Modulo:</strong>
-                            {{ $inventario->modulo_id }}
+                            {{ $inventario->modulo->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Panel:</strong>

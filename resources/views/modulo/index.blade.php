@@ -16,6 +16,12 @@
                                 {{ __('Modulo') }}
                             </span>
 
+                            <div class="float-right">
+                                <a href="{{ route('modulos.pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Ver en PDF') }}
+                                </a>
+                              </div>
+
                              <div class="float-right">
                                 <a href="{{ route('modulos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}

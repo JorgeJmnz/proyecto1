@@ -15,7 +15,11 @@
                             <span id="card_title">
                                 {{ __('Inventario') }}
                             </span>
-
+                            <div class="float-right">
+                                <a href="{{ route('inventarios.pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Ver en PDF') }}
+                                </a>
+                              </div>
                              <div class="float-right">
                                 <a href="{{ route('inventarios.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
@@ -50,7 +54,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $inventario->modulo_id }}</td>
+											<td>{{ $inventario->modulo->nombre }}</td>
 											<td>{{ $inventario->Panel }}</td>
 											<td>{{ $inventario->Puertopanel }}</td>
 											<td>{{ $inventario->Distancia }}</td>

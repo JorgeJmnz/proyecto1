@@ -2,7 +2,7 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('modulo_id') }}
+            {{ Form::label('Modulo') }}
             {{ Form::select('modulo_id', $modulos, $inventario->modulo_id, ['class' => 'form-control' . ($errors->has('modulo_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el modulo a inventarear']) }}
             {!! $errors->first('modulo_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -12,7 +12,7 @@
             {!! $errors->first('Panel', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Puertopanel') }}
+            {{ Form::label('Puerto del panel') }}
             {{ Form::text('Puertopanel', $inventario->Puertopanel, ['class' => 'form-control' . ($errors->has('Puertopanel') ? ' is-invalid' : ''), 'placeholder' => 'Puerto de panel']) }}
             {!! $errors->first('Puertopanel', '<div class="invalid-feedback">:message</div>') !!}
         </div>

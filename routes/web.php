@@ -21,8 +21,8 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('mapa');
 });
-
-
+Route::get('inventarios/pdf',[App\Http\Controllers\InventarioController::class, 'pdf'])->name('inventarios.pdf');
+Route::get('modulos/pdf',[App\Http\Controllers\ModuloController::class, 'pdf'])->name('modulos.pdf');
 Route::resource('modulos', App\Http\Controllers\ModuloController::class);
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
 Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class);

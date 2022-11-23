@@ -7,6 +7,7 @@ use App\Models\Subestacione;
 use App\Models\Categoria;
 use App\Models\Encargado;
 use Illuminate\Http\Request;
+use PDF;
 
 /**
  * Class ModuloControllera
@@ -33,6 +34,15 @@ class ModuloController extends Controller
         return view('modulo.index', compact('modulos', 'buscarpor'))
             ->with('i', (request()->input('page', 1) - 1) * $modulos->perPage());
     }
+    
+    public function pdf()
+    {
+        $modulos=Modulo::paginate();
+
+        $pdf= PDF::loadView('modulo.pdf',['modulos'=>$modulos]);
+           
+        return $pdf->stream();
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +56,7 @@ class ModuloController extends Controller
         $modulo = new Modulo();
         $categorias= Categoria::pluck ('nombre', 'id');
         $subestaciones= Subestacione::pluck('nombre', 'id');
-        $encargados= Encargado::pluck('nombre', 'id', 'notas');
+        $encargados= Encargado::pluck('nombre', 'id');
         return view('modulo.create', compact('modulo', 'categorias', 'subestaciones', 'encargados'));
     }
 
@@ -95,7 +105,7 @@ class ModuloController extends Controller
         $modulo = Modulo::find($id);
         $categorias= Categoria::pluck ('nombre', 'id');
         $subestaciones= Subestacione::pluck('nombre', 'id');
-        $encargados= Encargado::pluck('nombre', 'id', 'notas');
+        $encargados= Encargado::pluck('nombre', 'id');
         return view('modulo.create', compact('modulo', 'categorias', 'subestaciones', 'encargados'));
     }
 
