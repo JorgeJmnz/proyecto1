@@ -22,6 +22,7 @@ return new class extends Migration
             $table->bigInteger('categoria_id')->unsigned();
             $table->string('nombre', 50);
             $table->longText('descripcion');
+            $table->bigInteger('encargados_id')->unsigned();
             $table->bigInteger('subestacion_id')->unsigned();
             $table->double('lat', 20);
             $table->double('long', 20);
@@ -32,6 +33,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete("cascade");
+            $table->foreign('encargados_id')->references('id')->on('encargados')->onDelete("cascade");
             $table->foreign('subestacion_id')->references('id')->on('subestaciones')->onDelete("cascade");
         });
     }
@@ -43,6 +45,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('modulos');
     }
 };

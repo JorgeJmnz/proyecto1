@@ -18,6 +18,11 @@
             {{ Form::text('descripcion', $modulo->descripcion, ['class' => 'form-control' . ($errors->has('descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripción']) }}
             {!! $errors->first('descripcion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        <div class="form-group">
+            {{ Form::label('Encargado') }}
+            {{ Form::select('encargados_id', $encargados , $modulo->encargados_id, ['class' => 'form-control' . ($errors->has('encargado_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el encargado']) }}
+            {!! $errors->first('encargados_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
         <div class="form-group">
             {{ Form::label('Subestación') }}
