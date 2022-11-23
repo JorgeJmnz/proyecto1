@@ -45,11 +45,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('subestaciones.index') }}">{{ __('Subestaciones') }}</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('catalogo.index') }}">{{ __('Catalogo') }}</a>
-                                </li>
+                                
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('encargados.index') }}">{{ __('Encargados') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('inventarios.index') }}">{{ __('Inventario') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('catalogo.index') }}">{{ __('Catalogo') }}</a>
                                 </li>
                     </ul>
 

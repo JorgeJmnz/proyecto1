@@ -30,6 +30,7 @@ Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::cl
 Route::resource('catalogo', App\Http\Controllers\catalgocontroller::class);
 Route::resource('mostraritem', App\Http\Controllers\mostraritemcontroller::class);
 Route::resource('encargados', App\Http\Controllers\EncargadoController::class);
+Route::resource('inventarios', App\Http\Controllers\InventarioController::class);
 
 Auth::routes();
 
