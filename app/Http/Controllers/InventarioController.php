@@ -16,6 +16,10 @@ class InventarioController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('can:inventarios.index')->only('index');
+        $this->middleware('can:inventarios.edit')->only('edit','update');
+        $this->middleware('can:inventarios.create')->only('create','store');
+        $this->middleware('can:inventarios.destroy')->only('destroy');
     }
     /**
      * Display a listing of the resource.

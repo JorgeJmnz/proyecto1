@@ -9,6 +9,9 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
+            <a href="{{ route('categorias.index') }}" ><button type="button" class="btn btn-danger float-left"> Cancelar </button></a>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+         </div>
     </div>
 </div>

@@ -17,9 +17,11 @@
                             </span>
 
                              <div class="float-right">
+                                @can('subestaciones.create') 
                                 <a href="{{ route('subestaciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
+                                @endcan
                               </div>
                         </div>
                     </div>
@@ -51,10 +53,12 @@
                                             <td>
                                                 <form action="{{ route('subestaciones.destroy',$subestacione->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('subestaciones.show',$subestacione->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('subestaciones.edit',$subestacione->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    @can('subestaciones.edit')<a class="btn btn-sm btn-success" href="{{ route('subestaciones.edit',$subestacione->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>@endcan
                                                     @csrf
+                                                    @can('subestaciones.destroy')
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    @endcan
                                                 </form>
                                             </td>
                                         </tr>

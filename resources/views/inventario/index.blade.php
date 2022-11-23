@@ -17,9 +17,11 @@
                             </span>
 
                              <div class="float-right">
+                                @can('inventarios.create')
                                 <a href="{{ route('inventarios.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
+                                @endcan
                               </div>
                         </div>
                     </div>
@@ -59,10 +61,12 @@
                                             <td>
                                                 <form action="{{ route('inventarios.destroy',$inventario->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('inventarios.show',$inventario->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('inventarios.edit',$inventario->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    @can('inventarios.edit')<a class="btn btn-sm btn-success" href="{{ route('inventarios.edit',$inventario->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a> @endcan
                                                     @csrf
+                                                    @can('inventarios.destroy')
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    @endcan
                                                 </form>
                                             </td>
                                         </tr>

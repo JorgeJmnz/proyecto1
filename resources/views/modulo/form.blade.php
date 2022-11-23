@@ -82,10 +82,11 @@
                             </div>
                         </div>
         
-                        <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-                            <a href="{{ route('modulos.index') }}" class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancelar</a>
-                            <button type="submit" class='w-auto bg-green-500 hover:bg-green-700 rounded-lg shadow-xl font-medium border hover:text-white px-4 py-2'>Guardar</button>
+                        <div class="box-footer mt20">
+                            <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
+                                <a href="{{ route('modulos.index') }}" ><button type="button" class="btn btn-danger float-left"> Cancelar </button></a>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
                         </div>
-
     </div>
 </div>
