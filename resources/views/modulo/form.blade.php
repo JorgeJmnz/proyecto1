@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Encargado') }}
-            {{ Form::select('encargados_id', $encargados , $modulo->encargados_id, ['class' => 'form-control' . ($errors->has('encargado_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el encargado']) }}
+            {{ Form::select('encargados_id', $encargados , $modulo->encargados_id, ['class' => 'form-control' . ($errors->has('encargados_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el encargado']) }}
             {!! $errors->first('encargados_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

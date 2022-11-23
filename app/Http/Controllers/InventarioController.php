@@ -6,6 +6,7 @@ use App\Models\Inventario;
 use App\Models\Modulo;
 
 use Illuminate\Http\Request;
+use PDF;
 
 /**
  * Class InventarioController
@@ -34,6 +35,15 @@ class InventarioController extends Controller
 
         return view('inventario.index', compact('inventarios', 'buscarpor'))
             ->with('i', (request()->input('page', 1) - 1) * $inventarios->perPage());
+    }
+
+    public function pdf()
+    {
+        $inventarios=Inventario::paginate();
+
+        $pdf= PDF::loadView('inventario.pdf',['inventarios'=>$inventarios]);
+           
+        return $pdf->stream();
     }
 
     /**

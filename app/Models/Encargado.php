@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $created_at
  * @property $updated_at
  *
+ * @property Modulo[] $modulos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -34,5 +35,8 @@ class Encargado extends Model
     protected $fillable = ['nombre','Notas'];
 
 
-
+    public function modulos()
+    {
+        return $this->hasMany('App\Models\Modulo', 'encargados_id', 'id');
+    }
 }

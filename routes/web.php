@@ -22,10 +22,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('inventarios/pdf',[App\Http\Controllers\InventarioController::class, 'pdf'])->name('inventarios.pdf');
+Route::get('modulos/pdf',[App\Http\Controllers\ModuloController::class, 'pdf'])->name('modulos.pdf');
+Route::resource('modulos', App\Http\Controllers\ModuloController::class);
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
+Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class);
 
-Route::resource('modulos', App\Http\Controllers\ModuloController::class)->names('modulos');
-Route::resource('categorias', App\Http\Controllers\CategoriaController::class)->names('categorias');
-Route::resource('subestaciones', App\Http\Controllers\SubestacioneController::class)->names('subestaciones');
 
 Route::resource('users', App\Http\Controllers\UserController::class);
 
