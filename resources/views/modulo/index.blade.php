@@ -47,6 +47,7 @@
 										<th>Categoría</th>
 										<th>Nombre</th>
 										<th>Descripción</th>
+										<th>Encargado</th>
 										<th>Subestación</th>
 										<th>Latitud</th>
 										<th>Longitud</th>
@@ -66,6 +67,7 @@
 											<td>{{ $modulo->categoria->nombre }}</td>
 											<td>{{ $modulo->nombre }}</td>
 											<td>{{ $modulo->descripcion }}</td>
+                                            <td>{{ $modulo->encargado->nombre }}</td>
 											<td>{{ $modulo->subestacione->nombre }}</td>
 											<td>{{ $modulo->lat }}</td>
 											<td>{{ $modulo->long }}</td>
