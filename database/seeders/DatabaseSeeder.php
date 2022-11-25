@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
 
 
-        User::factory(0)->create()->each(function($user){
+        User::create()->each(function($user){
             $user->assignRole('Reader');
         });
         

@@ -52,18 +52,18 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'users.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'users.destroy'])->syncRoles([$role1]);
         
-        Permission::create(['name' => 'inventarios.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'inventarios.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'inventarios.create'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'inventarios.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'inventarios.destroy'])->syncRoles([$role1]);
 
 
-        Permission::create(['name' => 'encargados.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'encargados.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'encargados.create'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'encargados.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'encargados.destroy'])->syncRoles([$role1]);
 
-        Permission::create(['name' => 'catalogos.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'catalogos.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'catalogos.create'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'catalogos.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'catalogos.destroy'])->syncRoles([$role1]);
