@@ -368,7 +368,7 @@ return [
                     ],
                     [
                         'text' => 'Agregar usuarios',
-                        'url'  => '',
+                        'url'  => 'users.index',
                         'icon' => 'fas fa-fw fa-user',
                     ],
                     ['header' => 'CONFIGURACIÓN'],
