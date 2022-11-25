@@ -45,7 +45,7 @@ class ModuloController extends Controller
 
         $pdf= PDF::loadView('modulo.pdf',['modulos'=>$modulos]);
            
-        return $pdf->stream();
+        return $pdf->setPaper('a4', 'landscape')->stream();
     }
 
     /**

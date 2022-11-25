@@ -65,7 +65,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('catalogo.index') }}">{{ __('Catalogo') }}</a>
                                 </li>
-                    </ul>       @endcan
+                                @endcan
+                                @can('users.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuarios') }}</a>
+                                </li>
+                                @endcan
+                    </ul>
+                
                     <div>
                         <form class="d-flex" role="search">
                             <input name="buscarpor" class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search" value="{{$buscarpor}}">

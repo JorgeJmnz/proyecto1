@@ -36,25 +36,41 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                    @can('modulos.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('modulos.index') }}">{{ __('Modulos') }}</a>
                                 </li>
+                                @endcan
+                                @can('categorias.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
                                 </li>
+                                @endcan
+                                @can('subestaciones.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('subestaciones.index') }}">{{ __('Subestaciones') }}</a>
                                 </li>
-                                
+                                @endcan
+                                @can('encargados.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('encargados.index') }}">{{ __('Encargados') }}</a>
                                 </li>
+                                @endcan
+                                @can('inventarios.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('inventarios.index') }}">{{ __('Inventario') }}</a>
                                 </li>
+                                @endcan
+                                @can('catalogos.index')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('catalogo.index') }}">{{ __('Catalogo') }}</a>
                                 </li>
+                                @endcan
+                                @can('users.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuarios') }}</a>
+                                </li>
+                                @endcan
                     </ul>
 
 
