@@ -6,13 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inventarios PDF</title>
     
-    <link  href="{{public_path('css/app.css')}}" rel="stylesheet" type="text/css">
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: 5px;
+            text-align : center;
+            
+            align: center;
+            margin-left: auto;
+            margin-right: auto;
+            outline: 10px;
+
+            width: 120px;
+        }
+        th{
+            height: 50px;
+        }
+        
+        body{
+            font-family: verdana;
+            position: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead class="thead">
+    <div >
+        <div>
+            <table>
+                <thead >
                     <tr>
                         
                         
@@ -21,8 +42,6 @@
                         <th>Puerto del panel</th>
                         <th>Distancia en mts</th>
                         <th>Ubicación</th>
-
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
