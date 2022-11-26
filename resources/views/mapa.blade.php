@@ -1,8 +1,16 @@
+@extends('adminlte::page')
+
+@section('title', 'AdminHome')
+
+
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Demo: Build a store locator using Mapbox GL JS</title>
+    <title>Mapa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
     <link
@@ -23,9 +31,8 @@
       }
 
       .sidebar {
-        position: absolute;
-        width: 33.3333%;
-        height: 100%;
+        
+        
         top: 0;
         left: 0;
         overflow: hidden;
@@ -166,7 +173,7 @@
   <body>
     <div class="sidebar">
       <div class="heading">
-        <h1>Our locations</h1>
+        <h1>XEÑAL Ubicaciones</h1>
       </div>
       <div id="listings" class="listings"></div>
     </div>
@@ -362,3 +369,13 @@
     </script>
   </body>
 </html>
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
