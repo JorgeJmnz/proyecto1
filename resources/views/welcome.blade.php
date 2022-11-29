@@ -23,7 +23,7 @@
         <style>
             body{
                 background-image: url('img/fondo1.png');
-                backdrop-filter: 
+                
             }
         </style>
     </head>
