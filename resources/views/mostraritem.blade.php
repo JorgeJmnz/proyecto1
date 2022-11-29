@@ -11,6 +11,7 @@
     
     <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Tipo:</strong>{{ $modulo->categoria->nombre }}</p>
     <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Descripción:</strong> {{ $modulo->descripcion }}</p>
+    <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Encargado:</strong> {{ $modulo->encargado->nombre}}</p>
     <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Subestación:</strong> {{ $modulo->subestacione->nombre}}</p>
     <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Latitud:</strong>{{ $modulo->lat }}</p>
     <p  class="w-50 p-3" class="h-100 d-inline-block"><strong>Longitud:</strong>{{ $modulo->long }}</p>

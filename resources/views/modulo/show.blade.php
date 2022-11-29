@@ -33,6 +33,10 @@
                             {{ $modulo->descripcion }}
                         </div>
                         <div class="form-group">
+                            <strong>Encargado:</strong>
+                            {{ $modulo->encargado->nombre}}
+                        </div>
+                        <div class="form-group">
                             <strong>Subestación:</strong>
                             {{ $modulo->subestacione->nombre}}
                         </div>
