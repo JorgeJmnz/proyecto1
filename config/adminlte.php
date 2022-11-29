@@ -295,19 +295,19 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
-
+        /* TXT comentado
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        /* TXT comentado
+
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -371,7 +371,7 @@ return [
                         'url'  => 'users.index',
                         'icon' => 'fas fa-fw fa-user',
                     ],
-                    ['header' => 'CONFIGURACIÓN'],
+                    /*['header' => 'CONFIGURACIÓN'],
                     [
                         'text' => 'profile',                                                     
                         'url'  => 'admin/settings',                                                 
@@ -381,7 +381,7 @@ return [
                         'text' => 'change_password',
                         'url'  => 'admin/settings',
                         'icon' => 'fas fa-fw fa-lock',
-                    ],
+                    ],*/
                         ],
         ],
         [
