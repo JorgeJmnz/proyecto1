@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Xeñal</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="favicons/favicon.ico"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Fonts -->
@@ -41,8 +41,8 @@
                 </div>
             </div>
         </nav>
-            <div class="container">
-                    <div class="w-100"><img class="img-fluid mb-3 mb-lg-0" alt='Image' src="img/fondo.png" /></div>
+            <div class="container px-4 px-lg-5">
+                    <div class="w-100"><img class="img-fluid mb-3 mb-lg-0" alt='Image' src="img/fondo1.png" /></div>
                 </div>
     </body>
 </html>
