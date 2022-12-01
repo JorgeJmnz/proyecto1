@@ -102,7 +102,7 @@
                     <div class="col-lg-8">
                         <h2>Contactanos!</h2>
                         <p class="lead"><b>Brayan Emmanuel López Cruz</b></p>
-                        <p class="lead"><b>Augusto Jimenez Chimal</b></p>
+                        <p class="lead"><b>Jorge Augusto Jimenez Chimal</b></p>
                     </div>
                 </div>
             </div>
