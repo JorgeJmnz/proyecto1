@@ -22,7 +22,7 @@
 
         <style>
             body{
-                background-image: url('img/fondo1.png');
+                background-image: url('img/fondo.png');
                 
             },
             h1{
@@ -90,7 +90,7 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Servicios que ofrecemos</h2>
-                        <p class="lead">Creación de paginas, con buen manejo de información.</p>
+                        <p class="lead"><b>Creación de paginas, con buen manejo de información.</b></p>
                     </div>
                 </div>
             </div>
@@ -101,8 +101,8 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Contactanos!</h2>
-                        <p class="lead">Brayan Emmanuel López Cruz</p>
-                        <p class="lead">Augusto Jimenez Chimal</p>
+                        <p class="lead"><b>Brayan Emmanuel López Cruz</b></p>
+                        <p class="lead"><b>Augusto Jimenez Chimal</b></p>
                     </div>
                 </div>
             </div>
